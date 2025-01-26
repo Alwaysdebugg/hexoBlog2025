@@ -23,18 +23,20 @@ jobs:
       - name: Cache NPM dependencies
         uses: actions/cache@v4
         with:
-          path: node_modules
+          path: blog/node_modules
           key: ${{ runner.OS }}-npm-cache
           restore-keys: |
             ${{ runner.OS }}-npm-cache
       - name: Install Dependencies
         run: npm install
+        working-directory: ./blog
       - name: Build
         run: npm run build
+        working-directory: ./blog
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: ./blog/public
   deploy:
     needs: build
     permissions:
