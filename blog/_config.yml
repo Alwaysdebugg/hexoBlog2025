@@ -7,7 +7,7 @@ title: Jf | Blog
 subtitle: ''
 description: 'dev world'
 keywords:
-author: Jiaqi Feng
+author: Jacky
 language: en
 timezone: 'America/Toronto'
 
@@ -96,9 +96,18 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: blank
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+# Browsersync Config
+browsersync:
+  logLevel: "warn"
+  ghostMode:
+    scroll: true
+  instanceName: "uniqueHexoBlog"
+  files: ["source/**/*", "themes/blank/**/*"]
+  notify: false

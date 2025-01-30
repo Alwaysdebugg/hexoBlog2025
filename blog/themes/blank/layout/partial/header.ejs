@@ -1,0 +1,64 @@
+<header class="nav-container">
+    <div class="nav-inner">
+        <div class="nav-logo">
+            <% if(theme.logo.method == 1){ %>
+                <a href="<%- url_for() %>" class="logo-text"><%= config.title %></a>
+            <% } else if (theme.logo.method == 2 && theme.logo.avatar) { %>
+                <a href="<%- url_for() %>" class="logo-image">
+                    <img src="<%= theme.logo.avatar %>" alt="<%= config.title %>" onerror="this.onerror=null,this.src='<%= url_for(theme.lazyload.image) %>'">
+                </a>
+            <% } %>
+        </div>
+
+        <nav class="nav-items">
+            <a href="<%- url_for() %>" class="nav-item <%= is_home() ? 'active' : '' %>">
+                <i class="fas fa-home"></i> 首页
+            </a>
+            <a href="<%- url_for('/archives') %>" class="nav-item <%= is_archive() ? 'active' : '' %>">
+                <i class="fas fa-archive"></i> 归档
+            </a>
+            <a href="<%- url_for('/tags') %>" class="nav-item <%= is_tag() ? 'active' : '' %>">
+                <i class="fas fa-tags"></i> 标签
+            </a>
+            <a href="<%- url_for('/categories') %>" class="nav-item <%= is_category() ? 'active' : '' %>">
+                <i class="fas fa-folder"></i> 分类
+            </a>
+            <a href="<%- url_for('/about') %>" class="nav-item <%= is_current('about') ? 'active' : '' %>">
+                <i class="fas fa-user"></i> 关于
+            </a>
+            <% if(theme.subtitle_social.method == 2 || theme.subtitle_social.method == 3) { %>
+                <div class="social-icons">
+                    <% for (var i in theme.subtitle_social.social) { %>
+                        <a class="social-icon" href="<%= theme.subtitle_social.social[i].url%>" target="_blank" title="<%= i %>">
+                            <i class="<%= theme.subtitle_social.social[i].icon %>" aria-hidden="true"></i>
+                        </a>
+                    <% } %>
+                </div>
+            <% } %>
+            <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+
+        <button class="nav-toggle" onclick="toggleMobileMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</header>
+
+<script>
+function toggleDarkMode() {
+    document.documentElement.classList.toggle('dark-mode');
+    localStorage.setItem('dark-mode', document.documentElement.classList.contains('dark-mode'));
+}
+
+function toggleMobileMenu() {
+    document.querySelector('.nav-items').classList.toggle('active');
+}
+
+// 检查并应用保存的暗色模式设置
+if (localStorage.getItem('dark-mode') === 'true' || 
+    (!localStorage.getItem('dark-mode') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark-mode');
+}
+</script>
