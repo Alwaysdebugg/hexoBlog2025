@@ -155,7 +155,7 @@ copyright:
 
 # 文章分享
 sharejs:
-  enable: true
+  enable: false
   sites: facebook,twitter,wechat,weibo,qq
   style: https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css
   scripts: https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js
@@ -163,10 +163,11 @@ sharejs:
 
 # 赞助/捐献
 reward:
-  enable: true
+  enable: false
   AliPayQR: /img/alipay.jpg                 # 支付宝收款码
   WeChatQR: /img/wechat.jpg                # 微信收款码
   PayPalLink: https://paypal.me                            # paypal收款链接
+
 
 
 
@@ -216,8 +217,8 @@ Click:
 # Valine 评论系统  https://valine.js.org
 valine:
   enable: true # 如果使用valine，请设置改之为true
-  appid: # leancloud application app id
-  appkey: # leancloud application app key
+  appid: qIzoGL5mHwBdTG5vgFJLur1V-MdYXbMMI # leancloud application app id
+  appkey: 12OoyDmUkGWBgWA9QeZgegWz # leancloud application app key
   placeholder: 评论记得带上邮箱,你的留言我会马上收到邮箱提醒哒
   avatar: mm # gravatar style
   lang: zh-CN # i18n: zh-CN/zh-TW/en/ja
