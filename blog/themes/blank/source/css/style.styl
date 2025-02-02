@@ -1,4 +1,7 @@
 @import "var";
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap');
+
 
 :root{
   --color-mode: 'light'
@@ -22,9 +25,9 @@
     --link: #2997ff
     --code: #0071e3
     --codebg: rgba(255,255,255,0.05)
-    --bg: #1d1d1f
-    --navbg: rgba(29,29,31,0.8)
-    --item: #f5f5f7
+    --bg: #424242
+    --navbg: #424242
+    --item: #353535
     --meta: #86868b
     --cpyr: #1d1d1f
     --border: #424245
@@ -44,7 +47,8 @@ body{
     min-height: 100vh;
     background: var(--bg);
     color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
     font-size: 17px;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
@@ -142,7 +146,7 @@ li{
 }
 .content {
 	color: var(--text);
-	max-width: 680px;
+	max-width: 100%;
 	margin: 0 auto;
     word-break: break-all;
     overflow-wrap: break-word;
@@ -508,6 +512,7 @@ h3 {
   font-weight: 600;
   color: var(--text);
   text-decoration: none;
+  font-family: 'Nunito Sans';
   transition: all 0.2s ease;
 }
 
@@ -589,6 +594,19 @@ h3 {
 
 // Dark mode specific styles
 .dark-mode {
+
+    --bg: #fafafa; /* 白天模式背景色 */
+    --text: #1d1d1f; /* 白天模式文本色 */
+    --navbg: #fafafa; /* 白天模式导航背景色 */
+    --border: #d2d2d7; /* 白天模式边框色 */
+    --card-shadow: rgba(0,0,0,0.08); /* 白天模式卡片阴影 */
+    --meta: #86868b; /* 白天模式元数据色 */
+    --item: #fafafa; /* 白天模式卡片阴影 */
+    --cpyr: #f5f5f7; /* 白天模式版权背景色 */
+    --card-shadow: rgba(0,0,0,0.08); /* 白天模式卡片阴影 */
+    
+
+
   .nav-container {
     box-shadow: 0 1px 0 0 var(--border);
   }
@@ -596,6 +614,73 @@ h3 {
   .dark-mode-toggle i {
     color: #ffd60a;
   }
+}
+
+#recent-posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recent-post-item {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    background: var(--item);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.post-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+    font-weight: 600;
+    font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+}
+
+.post-meta {
+    display: flex;
+    justify-content: center;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.content {
+    margin: 10px 0;
+}
+
+.readmore {
+    margin-top: 10px;
+}
+
+.avatar-container {
+    display: inline-block; /* 使头像和文本在同一行 */
+    margin-right: 10px; /* 头像与文本之间的间距 */
+    border-radius: 50%; /* 圆形 */
+    overflow: hidden; /* 隐藏超出部分 */
+    width: 40px; /* 头像宽度 */
+    height: 40px; /* 头像高度 */
+    border: 2px solid var(--border); /* 边框颜色 */
+}
+
+.avatar {
+    width: 100%; /* 头像宽度自适应 */
+    height: auto; /* 高度自适应 */
 }
 
 
