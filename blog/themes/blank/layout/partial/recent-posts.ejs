@@ -17,13 +17,13 @@
           </div>
           <div class="content">
             <% if (post.excerpt) { %>
-              <%- post.excerpt.replace(/<p>(.*?)<\/p>/, '$1') %>
+              <% post.excerpt.replace(/<p>(?:(?!<code>).)*?<\/p>/, '') %>
             <% } else { %>
               <% 
-                const pContent = post.content.match(/<p>(.*?)<\/p>/);
-                const text = pContent ? pContent[1] : '';
+                const pContent = post.content.match(/<p>(?:(?!<code>).)*?<\/p>/);
+                const text = pContent ? pContent[0] : '';
               %>
-              <%- strip_html(truncate(text, { length: 200 })) %>
+              <% strip_html(truncate(text, { length: 200 })) %>
             <% } %>
           </div>
           <div class="readmore">
