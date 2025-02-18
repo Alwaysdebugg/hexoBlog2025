@@ -1,9 +1,12 @@
 
 <article id="post">
+  <div class="post-image-article">
+    <img src="<%= url_for(post.image || '/img/default-image.jpg') %>" alt="<%= post.title %>">
+  </div>
   <div class="post-title"><%= post.title || '(no title)' %></div>
   <%- partial('partial/post-meta', {cache:true}) %>
   <% if(theme.toc.enable && post.toc == true) {%>
-    <div id="toc" class="toc">
+      <div id="toc" class="toc">
           <h1><%= __('Toc') %></h1>
           <%- toc(post.content, {list_number: true}) %>
       </div>
