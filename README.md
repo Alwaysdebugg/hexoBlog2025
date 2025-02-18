@@ -2,7 +2,7 @@
 
 欢迎来到我的个人博客项目！这是一个基于Hexo框架搭建的博客系统，采用简洁现代的设计风格，专注于技术分享和个人成长记录。
 
-预览 [https://alwaysdebugg.github.io/hexoBlog2025/]
+https://alwaysdebugg.github.io/hexoBlog2025/
 
 ## 项目特点
 
