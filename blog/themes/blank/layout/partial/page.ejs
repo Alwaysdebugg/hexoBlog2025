@@ -12,6 +12,8 @@
             <%- partial('partial/link') %>
         <% } else if (page.type === 'search') { %>
             <%- partial('partial/_search/local-search') %>
+        <% } else if (page.type === 'about') { %>
+            <%- partial('partial/about') %>
         <% } else { %>
                 <%- page.content %>
         <% } %>
