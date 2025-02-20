@@ -1,5 +1,4 @@
 ---
-title: About me
 date: 2025-02-18 12:00:00
 image: /img/about.jpeg
 path: /about
