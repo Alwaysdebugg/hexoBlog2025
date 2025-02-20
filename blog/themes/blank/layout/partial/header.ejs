@@ -5,7 +5,7 @@
                 <div class="avatar-container">
                     <img src="<%= url_for('/img/avatar.jpg') %>" alt="<%= config.title %>" class="avatar" onerror="this.onerror=null,this.src='<%= url_for(theme.lazyload.image) %>'">
                 </div>
-                <a href="<%- url_for() %>" class="logo-text">Jf | blog</a>
+                <a href="<%- url_for() %>" class="logo-text"><span class="logo-text-title">Jf</span>Blogs</a>
             <% } %>
         </div>
         <button class="nav-toggle" onclick="toggleMobileMenu()">
