@@ -8,6 +8,9 @@
                 <a href="<%- url_for() %>" class="logo-text">Jf | blog</a>
             <% } %>
         </div>
+        <button class="nav-toggle" onclick="toggleMobileMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
         <nav class="nav-items">
             <a href="<%- url_for() %>" class="nav-item <%= is_home() ? 'active' : '' %>">
                 <i class="fas fa-home"></i> Home
@@ -35,14 +38,10 @@
                     <% } %>
                 </div>
             <% } %>
-            <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+            <!-- <button class="dark-mode-toggle" onclick="toggleDarkMode()">
                 <i class="fas fa-moon"></i>
-            </button>
+            </button> -->
         </nav>
-
-        <button class="nav-toggle" onclick="toggleMobileMenu()">
-            <i class="fas fa-bars"></i>
-        </button>
     </div>
 </header>
 
@@ -53,7 +52,17 @@ function toggleDarkMode() {
 }
 
 function toggleMobileMenu() {
-    document.querySelector('.nav-items').classList.toggle('active');
+    const navItems = document.querySelector('.nav-items');
+    navItems.classList.toggle('active');
+    console.log('toggleMobileMenu');
+    // 添加动画效果
+    if(navItems.classList.contains('active')) {
+        navItems.style.transform = 'translateY(0)';
+        navItems.style.opacity = '1';
+    } else {
+        navItems.style.transform = 'translateY(-100%)';
+        navItems.style.opacity = '0';
+    }
 }
 
 // 检查并应用保存的暗色模式设置

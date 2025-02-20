@@ -431,7 +431,7 @@ h3 {
 .nav-items {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 20px;
 }
 
 .nav-item {
@@ -491,13 +491,14 @@ h3 {
 @media (max-width: 768px) {
   .nav-toggle {
     display: block;
+    border-radius: 50px;
   }
 
   .nav-items {
     position: fixed;
     top: 64px;
-    left: 0;
-    right: 0;
+    left: 200px;
+    right: 40px;
     background: var(--navbg);
     padding: 16px;
     flex-direction: column;
@@ -505,11 +506,15 @@ h3 {
     transform: translateY(-100%);
     opacity: 0;
     transition: all 0.3s ease;
+    z-index: 999;
+    border-radius: 20px;
+    margin-top: 20px;
   }
 
   .nav-items.active {
     transform: translateY(0);
     opacity: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -626,6 +631,10 @@ h3 {
   .dark-mode-toggle i {
     color: #ffd60a;
   }
+}
+
+.container {
+  padding: 0 20px;
 }
 
 #recent-posts {
