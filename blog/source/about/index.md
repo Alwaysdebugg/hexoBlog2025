@@ -1,10 +1,9 @@
 ---
 date: 2025-02-18 12:00:00
-image: /img/about.jpeg
 path: /about
 ---
 
-![about](/img/about.jpeg)
+<img src="../img/about.jpeg" alt="about" class="w-[100%] h-[100%]" />
 
 *Hello!*  欢迎来到我的博客！我叫 *Jacky*，是一名正在刷级打怪的前端开发者，沉迷于 *React* 开发。
 我会在这里记录我的学习经历，分享我的技术心得，记录我的生活点滴。
