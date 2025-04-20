@@ -1,27 +1,28 @@
 ---
+title: Welcome to My Blog
 date: 2025-02-18 12:00:00
+image: /img/fa.jpeg
 path: /about
 ---
 
-<img src="../img/about.jpeg" alt="about" class="w-[100%] h-[100%]" />
+<!-- <img src="../img/about.jpeg" alt="about" class="w-[100%] h-[100%]" /> -->
 
-*Hello!*  欢迎来到我的博客！我叫 *Jacky*，是一名正在刷级打怪的前端开发者，沉迷于 *React* 开发。
-我会在这里记录我的学习经历，分享我的技术心得，记录我的生活点滴。
+**Hello!** Welcome to my blog! My name is **Jacky**, and I am a front-end developer who is leveling up and playing with **React** development. I will record my learning experience, share my technical experience, and record my life here.
 
-### 我的爱好
+### Hobbies
 
-- 编程
-- 人工智能
-- 户外运动
-- 电子设备
-- 瞎折腾
+- Coding
+- AI / Web3
+- Outdoor Activities(Fishing\Hiking\Camping)
+- Electronic Devices
+- Learning by building
 
-### 联系方式
+### Feel free to reach out
 
-- 邮箱：fengjacky84@gmail.com
+- Mail：fengjacky84@gmail.com
 - Github：https://github.com/Alwaysdebugg
 - Portfolio：https://alwaysdebugg.github.io/myPortfolio/
 
-### 致谢
+### Thx
 
-感谢你的访问！希望你能在我的博客中找到有价值的内容。
+Thank you for visiting! I hope you find valuable content in my blog.

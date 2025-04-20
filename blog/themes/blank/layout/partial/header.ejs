@@ -25,7 +25,7 @@
             <a href="<%- url_for('/categories') %>" class="nav-item <%= is_category() ? 'active' : '' %>">
                 <i class="fas fa-folder"></i> 分类
             </a> -->
-            <a class="nav-item <%= is_current('backyard') ? 'active' : '' %>">
+            <a href="<%- url_for('/backyard') %>" class="nav-item <%= is_current('backyard') ? 'active' : '' %>">
                 <i class="fas fa-house"></i> Backyard
             </a>
             <a href="<%- url_for('/about') %>" class="nav-item <%= is_current('about') ? 'active' : '' %>">
